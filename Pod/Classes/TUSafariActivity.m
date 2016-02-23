@@ -40,13 +40,8 @@
 	return NSStringFromClass([self class]);
 }
 
-- (NSString *)activityTitle
-{
-    NSURL *resourcesURL = [[NSBundle bundleForClass:self.class] URLForResource:@"TUSafariActivity" withExtension:@"bundle"];
-    NSBundle *bundle = [NSBundle bundleWithURL:resourcesURL];
-    NSString *defaultString = [bundle localizedStringForKey:@"Open in Safari" value:@"Open in Safari" table:@"TUSafariActivity"];
-    
-    return [[NSBundle mainBundle] localizedStringForKey:@"Open in Safari" value:defaultString table:nil];
+- (NSString *)activityTitle {    
+    return @"Open in Safari";
 }
 
 - (UIImage *)activityImage
